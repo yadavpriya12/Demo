@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Largest Number</h1>
+    <input id="num1" type="number">
+    <input id="num2" type="number">
+    <input id="num3" type="number">
+    <button onclick="large()">submit</button>
+    <input id="res">
+    <script>
+
+        function large()
+        { 
+        let a = parseInt(document.getElementById("num1").value)
+        let b = parseInt(document.getElementById("num2").value)
+        let c = parseInt(document.getElementById("num3").value)
+
+        if(a>b && a>c)
+    {
+        document.getElementById("res").value=a+"is a largest number"
+    }
+
+    else if(b>a && b>c )
+    {
+        document.getElementById("res").value=b+"is a largest number"
+    }
+
+    else if(c>a && c>b)
+    {
+        document.getElementById("res").value=c+ "is a largest number"
+    }
+
+}
+    </script>
+</body>
+</html>
