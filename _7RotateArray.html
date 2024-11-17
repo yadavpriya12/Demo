@@ -1,0 +1,45 @@
+<script>
+
+// let arr=[10,20,30,40,50,60,70]
+//     let temp = arr[0]
+//     for(let i=0;i<arr.length-1;i++)
+//   {
+    
+//     arr[i]=arr[i+1]
+//   }
+//   arr[arr.length-1]=temp
+//     console.log(arr)
+
+    let arr = [1, 2, 3, 4, 5];
+let k = 2;
+
+
+k = k % arr.length;// 2%5==2 shift two elements
+
+
+for (let i = 0; i < k; i++) {
+    // i=0
+    //i=1
+    let last = arr[arr.length - 1];
+    // last = arr[4]=5
+    // last = arr[4]=4
+
+    //j=4
+    //j=3
+    for (let j = arr.length - 1; j > 0; j--)
+     {
+        arr[j] = arr[j - 1];//arr[4] = arr[3] => 3
+        //arr[3] = arr[2]  => 2
+    }
+
+        arr[0] = last; // arr[0] = arr[4]=5
+        //array after 1 rotation => [5,1,2,3,4]
+
+        //arr[0] = arr[4] =>4
+        //array after 2 rotation => [4,5,1,2,3]
+}
+
+console.log("Rotated Array:", arr);
+
+
+</script>

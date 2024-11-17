@@ -1,0 +1,21 @@
+<script>
+    let s ="java is a platform independent"
+     let consonant_count = 0;
+     let vowel_count = 0;
+
+     
+     for(let i =0; i<s.length; i++)
+     {
+        let char = s[i];
+        if(char=='a'|| char=='e' || char=='i' || char=='o' || char=='u' && char=='A'|| char=='E' || char=='I' || char=='O' || char=='U')
+     {
+        vowel_count++;
+     }
+     else{
+        consonant_count++;
+     }
+     }
+     console.log(`vowels: ${vowel_count}`);
+     console.log(`consonant_count: ${consonant_count}`);
+
+</script>

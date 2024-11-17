@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr=[10,23,65,5,2,4,5,9,3,5,1,6,6]
+        let count=0
+        let search=parseInt(prompt("Enter any number"))
+    
+        for(let i=0;i<arr.length;i++)
+    {
+        if(arr[i]== search)
+    {
+        count++;
+    
+    }
+    }
+    console.log(`occurence of:${search} is ${count}`)
+
+//     let arr = [10, 23, 65, 5, 2, 4, 5, 9, 3, 5, 1, 6, 6];
+
+// // Loop to count occurrences of each element
+// console.log("Occurrences of all elements:");
+// for (let i = 0; i < arr.length; i++) {
+//     let count = 1; // Start count as 1 for the current element
+//     let alreadyCounted = false;
+
+//     // Check if the current element has already been processed
+//     for (let k = 0; k < i; k++) {
+//         if (arr[i] === arr[k]) {
+//             alreadyCounted = true; // Mark it as already counted
+//             break;
+//         }
+//     }
+
+//     // Skip if the element has already been counted
+//     if (alreadyCounted) {
+//         continue;
+//     }
+
+//     // Count occurrences of the current element in the remaining part of the array
+//     for (let j = i + 1; j < arr.length; j++) {
+//         if (arr[i] === arr[j]) {
+//             count++;
+//         }
+//     }
+
+//     // Print the result for the current element
+//     console.log(`${arr[i]}: ${count}`);
+// }
+
+    </script>
+</body>
+</html>
