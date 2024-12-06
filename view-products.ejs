@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include('__bootstrap.ejs') %>
+</head>
+<body>
+    <%- include('_header.ejs') %>
+
+<div class="container mt-4">
+    <h1 class="text-center mb-4">Product List</h1>
+    <div class="row">
+        <% for (let i = 0; i < products.length; i++) { %>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img class="card-img-top" src="<%= products[i].imageUrl %>" alt="Image of <%= products[i].name %>" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title text-center"><%= products[i].name %></h5>
+                        <p class="card-text"><strong>Description:</strong> <%= products[i].description %></p>
+                        <p class="card-text"><strong>Price:</strong> $<%= products[i].price %></p>
+                        <p class="card-text"><strong>Category:</strong> <%= products[i].categoryId %></p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a onclick="return confirm('Do you want to delete?')" href="/product/delete-product/<%= products[i].id %>">
+                            <button class="btn btn-outline-danger" style="width:100px;">Delete</button>
+                        </a>  
+                        <a href="/product/edit-product/<%= products[i].id %>">
+                            <button class="btn btn-primary" style="width:100px;">Edit</button>
+                        </a> 
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>                                              
+</div>
+</body>
+</html>
